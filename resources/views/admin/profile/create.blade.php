@@ -30,8 +30,8 @@
                         <!--まずグリッドdivタグでレイアウト決めてから、項目の調整-->
                         <div class="col-md-10"> 
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio"  name="male" value="0">男性
-                            <input class="form-check-input"  type="radio"  name="female" value="1">女性                        
+                            <input class="form-check-input" type="radio"  name="gender" value="0">男性
+                            <input class="form-check-input"  type="radio"  name="gender" value="1">女性                        
                         </div>  
                         </div>
                     </div>
@@ -39,7 +39,7 @@
                     <div class="form-group row">
                         <label class="col-md-2">趣味</label>
                         <div class="col-md-10">
-                        <select class="form-control">
+                        <select class="form-control hobby">
                             <option name="noSelect">選択して下さい</option>
                             <option name="sport" value="1">スポーツ</option>
                             <option name="cook" value="2">料理</option>
