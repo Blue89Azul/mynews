@@ -40,7 +40,7 @@
                     </div>
                     
                     {{ csrf_field() }}
-                    <input type="submit" class="btn btn-primary" name="更新">
+                    <input type="submit" class="btn btn-primary">
                 </form>
             </div>
         </div>

@@ -18,7 +18,7 @@
                         <input type="text" class="form-control" name="cond_title" value="{{ $cond_title }}">
                     </div>
                     <div class="col-md-2">
-                        {{ csrf_field }}
+                        {{ csrf_field() }}
                         <input type="submit" class="btn btn-primary" value="検索">
                     </div>
                 </div>
@@ -50,9 +50,17 @@
                             </th>
                             <td>{{ \Str::limit($news->title, 100) }}</td>
                             <td>{{ \Str::limit($news->body, 250) }}</td>
+                            <td>
+                                <div>
+                                    <a href="{{ action('Admin\NewsController@edit', ['id' => $news->id]) }}">編集</a>
+                                </div>
+                                <div>
+                                    <a href="{{ action('Admin\NewsController@delete', ['id'=>$news->id]) }}">削除</a>
+                                </div>
+                            </td>
                         </tr>
+                        @endforeach
                     </tbody>
-                    @endforeach
                 </table>
             </div>
         </div>
