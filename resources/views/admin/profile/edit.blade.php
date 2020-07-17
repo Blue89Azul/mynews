@@ -19,7 +19,7 @@
                 <div class="form-group row">
                     <label class="col-md-2" for="your_name">氏名</label>
                     <div class="col-md-10">
-                        <input type="text" class="form-control" name="your_name" value="{{ $profile_form->title }}">
+                        <input type="text" class="form-control" name="your_name" value="{{ $profile_form->your_name }}">
                     </div>
                 </div>
                 
@@ -50,7 +50,7 @@
                  <div class="form-group row">
                     <label class="col-md-2" for="selfIntro">自己紹介</label>
                     <div class="col-md-10">
-                        <textarea class="form-control" name="selfIntro" value="{{ $profile_form->selfIntro }}" rows="20" ></textarea>
+                        <textarea class="form-control" name="selfIntro" rows="20" >{{ $profile_form->selfIntro }}</textarea>
                     </div>
                 </div>
                 

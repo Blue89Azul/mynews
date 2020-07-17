@@ -39,7 +39,7 @@
                     <div class="form-group row">
                         <label class="col-md-2">趣味</label>
                         <div class="col-md-10">
-                        <select class="form-control hobby">
+                        <select class="form-control" name="hobby">
                             <option name="noSelect">選択して下さい</option>
                             <option name="sport" value="1">スポーツ</option>
                             <option name="cook" value="2">料理</option>
