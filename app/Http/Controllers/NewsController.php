@@ -12,9 +12,11 @@ class NewsController extends Controller
     public function index(Request $request)
     {
         $posts = News::all()->sortByDesc('updated_at');
+        //newsの全テーブルを取得
         
         if (count($posts)>0) {
             $headline = $posts->shift();
+        //$headlineに最新記事のみ代入
         } else {
             $headline = null;
         }

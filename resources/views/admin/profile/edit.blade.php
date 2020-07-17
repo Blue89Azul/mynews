@@ -27,8 +27,8 @@
                     <label class="col-md-2" for="gender">性別</label>
                     <div class="col-md-10">
                         <div class="form-check form-check-inline">
-                            <input type="radio" name="gender" value="{{ $profile_form->gender }}">男性
-                            <input type="radio" name="gender" value="{{ $profile_form->gender }}">女性
+                            <input type="radio" name="gender" value="0">男性
+                            <input type="radio" name="gender" value="1">女性
                         </div>
                     </div>
                 </div>
@@ -38,11 +38,11 @@
                     <div class="col-md-10">
                     <select class="form-control hobby">
                         <option name="noSelect">選択して下さい</option>
-                        <option name="sport" value="{{ $profile_form->hobby}}">スポーツ</option>
-                        <option name="cook" value="{{ $profile_form->hobby}}">料理</option>
-                        <option name="shopping" value="{{ $profile_form->hobby}}">買い物</option>
-                        <option name="readBook" value="{{ $profile_form->hobby}}">読書</option>
-                        <option name="other" value="{{ $profile_form->hobby}}">その他</option>
+                        <option name="sport" value="1">スポーツ</option>
+                        <option name="cook" value="2">料理</option>
+                        <option name="shopping" value="3}">買い物</option>
+                        <option name="readBook" value="4">読書</option>
+                        <option name="other" value="5">その他</option>
                     </select>                           
                     </div>
                 </div>
