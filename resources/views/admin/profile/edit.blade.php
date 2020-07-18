@@ -66,9 +66,9 @@
                 <div class="col-md-4 mx-auto">
                     <h2>編集履歴</h2>
                     <ul class="list-group">
-                        @if($profile_form->historia != NULL)
+                        @if($profile_form->historias != NULL)
                         <!--主クラスから従クラスのtableを参照する-->
-                        @foreach($profile_form->historia as $historia)
+                        @foreach($profile_form->historias as $historia)
                         <li class="list-group-item">{{ $historia->edited_at }}</li>
                         @endforeach
                         @endif

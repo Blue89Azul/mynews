@@ -12,7 +12,7 @@ class Profile extends Model
         'your_name' => 'required',
         'gender' => 'required',
         'hobby' => 'required',
-        'selfInfo' => 'required',
+        'selfIntro' => 'required',
         );
     
     public function historias()

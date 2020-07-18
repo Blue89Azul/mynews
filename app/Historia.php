@@ -10,6 +10,6 @@ class Historia extends Model
     //idへの値の代入を防ぐ
     public static $rules = array(
         'profile_id' => 'required',
-        'edited_at' => 'required'
+        'edited_at' => 'required',
         );
 }
