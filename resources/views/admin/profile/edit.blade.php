@@ -27,25 +27,46 @@
                     <label class="col-md-2" for="gender">性別</label>
                     <div class="col-md-10">
                         <div class="form-check form-check-inline">
-                            <input type="radio" name="gender" value="0">男性
-                            <input type="radio" name="gender" value="1">女性
+                    <input type="radio" name="gender" value="0" 
+                            <?php if (!empty($profile_form->gender)&&$profile_form->gender==="0") { echo 'checked';} ?>/>男性
+                            <input type="radio" name="gender" value="1" 
+                            <?php if (!empty($profile_form->gender)&&$profile_form->gender==="1") {echo 'checked';} ?>/>女性
                         </div>
                     </div>
                 </div>
                 
-                <div class="form-group row">
+                    <div class="form-group row">
                     <label class="col-md-2" for="hobby">趣味</label>
                     <div class="col-md-10">
                     <select class="form-control" name="hobby">
                         <option name="noSelect">選択して下さい</option>
-                        <option name="sport" value="1">スポーツ</option>
-                        <option name="cook" value="2">料理</option>
-                        <option name="shopping" value="3}">買い物</option>
-                        <option name="readBook" value="4">読書</option>
-                        <option name="other" value="5">その他</option>
+                        <option name="sport" value="1"
+                        <?php if (!empty($profile_form->hobby)&&$profile_form->hobby==="1") {echo 'selected';} ?>>スポーツ</option>
+                        <option name="cook" value="2"
+                        <?php if (!empty($profile_form->hobby)&&$profile_form->hobby==="2") {echo 'selected';} ?>>料理</option>
+                        <option name="shopping" value="3" 
+                        <?php if (!empty($profile_form->hobby)&&$profile_form->hobby==="3") {echo 'selected';} ?>>買い物</option>
+                        <option name="readBook" value="4" 
+                        <?php if (!empty($profile_form->hobby)&&$profile_form->hobby==="4") {echo 'selected';} ?>>読書</option>
+                        <option name="other" value="5" 
+                        <?php if (!empty($profile_form->hobby)&&$profile_form->hobby==="5") {echo 'selected';} ?>>その他</option>
                     </select>                           
                     </div>
                 </div>
+                
+                <!--<div class="form-group row">-->
+                <!--    <label class="col-md-2" for="hobby">趣味</label>-->
+                <!--    <div class="col-md-10">-->
+                <!--    <select class="form-control" name="hobby">-->
+                <!--        <option name="noSelect">選択して下さい</option>-->
+                <!--        <option name="sport" value="1">スポーツ</option>-->
+                <!--        <option name="cook" value="2">料理</option>-->
+                <!--        <option name="shopping" value="3}">買い物</option>-->
+                <!--        <option name="readBook" value="4">読書</option>-->
+                <!--        <option name="other" value="5">その他</option>-->
+                <!--    </select>                           -->
+                <!--    </div>-->
+                <!--</div>-->
                 
                  <div class="form-group row">
                     <label class="col-md-2" for="selfIntro">自己紹介</label>

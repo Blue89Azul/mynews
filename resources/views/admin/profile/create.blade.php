@@ -41,11 +41,11 @@
                         <div class="col-md-10">
                         <select class="form-control" name="hobby">
                             <option name="noSelect">選択して下さい</option>
-                            <option name="sport" value="1">スポーツ</option>
-                            <option name="cook" value="2">料理</option>
-                            <option name="shopping" value="3">買い物</option>
-                            <option name="readBook" value="4">読書</option>
-                            <option name="other" value="5">その他</option>
+                            <option name="sport" value="スポーツ">スポーツ</option>
+                            <option name="cook" value="料理">料理</option>
+                            <option name="shopping" value="買い物">買い物</option>
+                            <option name="readBook" value="読書">読書</option>
+                            <option name="other" value="その他">その他</option>
                         </select>                           
                         </div>
                     </div>
