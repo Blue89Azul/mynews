@@ -36,7 +36,7 @@
                 <div class="form-group row">
                     <label class="col-md-2" for="hobby">趣味</label>
                     <div class="col-md-10">
-                    <select class="form-control hobby">
+                    <select class="form-control" name="hobby">
                         <option name="noSelect">選択して下さい</option>
                         <option name="sport" value="1">スポーツ</option>
                         <option name="cook" value="2">料理</option>
@@ -61,8 +61,21 @@
                         <input type="submit" class="btn btn-secondary" value="更新">
                     </div>
                 </div>
-                
             </form>
+            <div class="row mt-5">
+                <div class="col-md-4 mx-auto">
+                    <h2>編集履歴</h2>
+                    <ul class="list-group">
+                        @if($profile_form->historia != NULL)
+                        <!--主クラスから従クラスのtableを参照する-->
+                        @foreach($profile_form->historia as $historia)
+                        <li class="list-group-item">{{ $historia->edited_at }}</li>
+                        @endforeach
+                        @endif
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+@endsection
