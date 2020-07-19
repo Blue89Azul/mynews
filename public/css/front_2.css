@@ -1,0 +1,47 @@
+body {
+  color: #000;
+  witdth: 100vh;
+}
+
+.header .logo {
+  width: 120px;
+  height: 82px;
+}
+
+h3 {
+  margin: 0 20px 0 0;
+  line-height: 50px;
+}
+
+.profile_item {
+  width: 90%;
+  margin: 0 auto;
+  height: 50px;
+  border-bottom: 1px solid;
+  line-height: 50px;
+}
+
+.profile_item p {
+  font-size: 1.5em;
+}
+
+.profile_item .icon:before {
+  content: "";
+  padding-right: 10px;
+  border-left: 7px solid blue;
+}
+
+.profile_item ::last-child {
+  height: 150px;
+  font-size: 0.75em;
+}
+
+.btns {
+  width: 90%;
+  margin: 20px auto;
+}
+
+.btns .btn {
+  margin-right: 10px;
+}
+
