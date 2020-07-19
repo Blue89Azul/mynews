@@ -55,7 +55,7 @@ class ProfileController extends Controller
         $historias->edited_at = Carbon::now();
         $historias->save();
         
-        return redirect('/');
+        return redirect('admin/profile');
     }
     
     
