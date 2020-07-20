@@ -4,8 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Historia extends Model
+class ProfileHistory extends Model
 {
+    protected $table = 'ProfileHistories';
     protected $guarded = array('id');
     //idへの値の代入を防ぐ
     public static $rules = array(

@@ -12,7 +12,7 @@
             <h3 class="icon">性別</h3>
             @if($headline->gender === "0")
             <p>男性</p> 
-            @elseif($headline->gender === "0")
+            @elseif($headline->gender === "1")
             <p>女性</p> 
             @endif
         </div>

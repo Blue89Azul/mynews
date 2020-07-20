@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 use App\Profile;
-use App\Historia;
+use App\ProfileHistory;
 use Carbon\Carbon;
 
 class ProfileController extends Controller
@@ -50,10 +50,10 @@ class ProfileController extends Controller
         $profile->save();
         
         //historiaクラスのやつ
-        $historias = new Historia;
-        $historias->profile_id = $profile->id;
-        $historias->edited_at = Carbon::now();
-        $historias->save();
+        $profileHistories = new ProfileHistory;
+        $profileHistories->profile_id = $profile->id;
+        $profileHistories->edited_at = Carbon::now();
+        $profileHistories->save();
         
         return redirect('admin/profile');
     }

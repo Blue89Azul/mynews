@@ -17,6 +17,6 @@ class ProfileController extends Controller
         } else {
             $headline = $post->shift();
         }
-        return view('profile.index', ['post' => $post,'headline' => $headline]);
+        return view('profile.index', ['headline' => $headline]);
     }
 }
