@@ -9,7 +9,7 @@ use App\Http\Controllers\Controller;
 
 
 use App\News;
-use App\History;
+use App\NewsHistory;
 use Carbon\Carbon;
 
 // コントローラー内でモデルの呼び出し。
@@ -30,9 +30,9 @@ class NewsController extends Controller
         
         if (isset($form['image'])) {
             $path = $request->file('image')->store('public/image');
-            $news->image_path=basename($path);
+            $news->image_path = basename($path);
         } else {
-            $news->image_path = null;
+            $news->image = null;
         }
         
         unset($form['_token']);
@@ -83,7 +83,7 @@ class NewsController extends Controller
         $news->fill($news_form)->save();
         
         // Hitoryモデル
-        $history = new History;
+        $history = new NewsHistory;
         $history->news_id = $news->id;
         $history->edited_at = Carbon::now();
         $history->save();

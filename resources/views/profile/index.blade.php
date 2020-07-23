@@ -40,7 +40,7 @@
         </div>
         <div class="btns">
         <a href="{{ action('Admin\ProfileController@edit', ['id' => $headline->id]) }}" class="btn btn-primary">編集</a>
-        <a href="{{ action('Admin\ProfileController@create', ['id' => $headline->id]) }}" class="btn btn-primary">新規作成</a>
+        <a href="{{ action('Admin\ProfileController@create')}}" class="btn btn-primary">新規作成</a>
         </div>
      </div>
     </div>

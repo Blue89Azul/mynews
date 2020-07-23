@@ -1,4 +1,5 @@
 @extends('layouts.front')
+@section('title', 'ニュース一覧')
 
 @section('content')
 <div class="container">
@@ -44,7 +45,7 @@
                 </div>
                 <div class="image col-md-6 text-right mt-4">
                     @if($post->image_path)
-                    <img src="{{ asset('storage/image', $post->image_path) }}">
+                    <img src="{{ asset('storage/image', $news->image) }}">
                     @endif
                 </div>
             </div>
