@@ -83,10 +83,10 @@ class NewsController extends Controller
         $news->fill($news_form)->save();
         
         // Hitoryモデル
-        $history = new NewsHistory;
-        $history->news_id = $news->id;
-        $history->edited_at = Carbon::now();
-        $history->save();
+        $histories = new NewsHistory;
+        $histories->news_id = $news->id;
+        $histories->edited_at = Carbon::now();
+        $histories->save();
         
         return redirect('admin/news');
     }

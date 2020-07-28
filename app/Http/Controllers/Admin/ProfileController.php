@@ -43,17 +43,16 @@ class ProfileController extends Controller
         $this->validate($request, Profile::$rules);
         $profile = Profile::find($request->id);
         $profile_form = $request->all();
-        // dd($profile_form);
         
         unset($profile_form['_token']);
         $profile->fill($profile_form);
         $profile->save();
         
         //historiaクラスのやつ
-        $profileHistories = new ProfileHistory;
-        $profileHistories->profile_id = $profile->id;
-        $profileHistories->edited_at = Carbon::now();
-        $profileHistories->save();
+        $histories = new ProfileHistory;
+        $histories->profile_id = $profile->id;
+        $histories->edited_at = Carbon::now();
+        $histories->save();
         
         return redirect('admin/profile');
     }
