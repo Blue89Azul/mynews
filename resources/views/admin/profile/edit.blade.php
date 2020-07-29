@@ -27,9 +27,9 @@
                     <label class="col-md-2" for="gender">性別</label>
                     <div class="col-md-10">
                         <div class="form-check form-check-inline">
-                    <input type="radio" name="gender" value="0" 
+                    <input type="radio" name="gender" 
                             <?php if (!empty($profile_form->gender) && $profile_form->gender === "0") { echo 'checked'; } ?>/>男性
-                            <input type="radio" name="gender" value="1" 
+                            <input type="radio" name="gender" 
                             <?php if (!empty($profile_form->gender) && $profile_form->gender === "1") { echo 'checked'; } ?>/>女性
                         </div>
                     </div>
@@ -73,9 +73,8 @@
                 <div class="col-md-4 mx-auto">
                     <h2>編集履歴</h2>
                     <ul class="list-group">
-                        @if($profile_form->profilehistories != NULL)
-                        <!--主クラスから従クラスのtableを参照する-->
-                        @foreach($profile_form->profilehistories as $history)
+                        @if($profile_form->histories != NULL)
+                        @foreach($profile_form->histories as $history)
                         <li class="list-group-item">{{ $history->edited_at }}</li>
                         @endforeach
                         @endif

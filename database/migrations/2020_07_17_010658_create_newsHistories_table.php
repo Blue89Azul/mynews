@@ -13,11 +13,10 @@ class CreateNewsHistoriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('newshistories', function (Blueprint $table) {
+        Schema::create('news_histories', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('news_id');
             $table->string('edited_at');
-            
             $table->timestamps();
         });
     }
@@ -29,6 +28,6 @@ class CreateNewsHistoriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('newshistories');
+        Schema::dropIfExists('news_histories');
     }
 }
