@@ -4,7 +4,6 @@
 
 <div class="container">
     <div class="col-md-10 mx-auto">
-        
         @if(!is_null($headline))
         <div class="row profile_item">
             <h3 class="icon">氏名</h3>
