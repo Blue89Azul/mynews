@@ -4,6 +4,8 @@
 
 <div class="container">
     <div class="col-md-10 mx-auto">
+        
+        @if(!is_null($headline))
         <div class="row profile_item">
             <h3 class="icon">氏名</h3>
             <p>{{ $headline->your_name }}</p>
@@ -38,8 +40,24 @@
             <h3 class="icon">自己紹介文</h3>
             <p>{{ $headline->selfIntro }}</p>
         </div>
+        @else
+        <div class="row profile_item">
+            <h3 class="icon">氏名</h3>
+        </div>
+        <div class="row profile_item">
+            <h3 class="icon">性別</h3>
+        </div>
+        <div class="row profile_item">
+            <h3 class="icon">趣味</h3>
+        </div>
+        <div class="row profile_item">
+            <h3 class="icon">自己紹介文</h3>
+        </div>
+        @endif
         <div class="btns">
+        @if(isset($headline))
         <a href="{{ action('Admin\ProfileController@edit', ['id' => $headline->id]) }}" class="btn btn-primary">編集</a>
+        @endif
         <a href="{{ action('Admin\ProfileController@create')}}" class="btn btn-primary">新規作成</a>
         </div>
      </div>

@@ -26,7 +26,7 @@ class ProfileController extends Controller
         $profile->fill($form);
         $profile->save();
         
-        return redirect('admin/profile/create');
+        return redirect('/profile');
     }
 
     public function edit(Request $request)
