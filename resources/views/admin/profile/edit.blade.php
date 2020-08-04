@@ -27,9 +27,9 @@
                     <label class="col-md-2" for="gender">性別</label>
                     <div class="col-md-10">
                         <div class="form-check form-check-inline">
-                    <input type="radio" name="gender" 
+                    <input type="radio" name="gender" value="0"
                             <?php if (!empty($profile_form->gender) && $profile_form->gender === "0") { echo 'checked'; } ?>/>男性
-                            <input type="radio" name="gender" 
+                            <input type="radio" name="gender" value="1"
                             <?php if (!empty($profile_form->gender) && $profile_form->gender === "1") { echo 'checked'; } ?>/>女性
                         </div>
                     </div>
