@@ -12,8 +12,8 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
-                color: #636b6f;
+                background-color: #000;
+                color: #fff;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
                 height: 100vh;
@@ -49,7 +49,7 @@
             }
 
             .links > a {
-                color: #636b6f;
+                color: #fff;
                 padding: 0 25px;
                 font-size: 13px;
                 font-weight: 600;
@@ -60,6 +60,17 @@
 
             .m-b-md {
                 margin-bottom: 30px;
+            }
+            
+            .btn {
+                color: red;
+                display: block;
+                margin-bottom: 30px;
+                text-decoration: none;
+            }
+            
+            .btn:hover {
+                color: blue;
             }
         </style>
     </head>
@@ -81,9 +92,9 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Deploy Heroku!
+                   Profile
                 </div>
-
+                    <a class="btn" href="{{url('/profile')}}">プロフィール画面</a>
                 <div class="links">
                     <a href="https://laravel.com/docs">Docs</a>
                     <a href="https://laracasts.com">Laracasts</a>
